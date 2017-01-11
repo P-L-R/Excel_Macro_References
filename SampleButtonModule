@@ -1,0 +1,38 @@
+'BUTTONS MODULE
+
+'PMBrowse variables
+Public sFPth5 As String
+Public wbPM As Workbook
+
+Public Sub allRepBrowse()
+
+Application.ScreenUpdating = False
+
+Set cmbBox = ThisWorkbook.Sheets("Macro").ComboBox1
+
+'select and open Additional PO workbook
+sFPth1 = Application.GetOpenFilename(, , "Allocation File Workbook Selection")
+If sFPth1 <> "" And sFPth1 <> "False" Then
+    'parse value into textbox
+    ActiveSheet.OLEObjects("TextBox1").Object.Value = sFPth1
+    'open workbook, get sheet names
+    Application.DisplayAlerts = False
+    Set wbAllRep = Workbooks.Open(sFPth1)
+    Application.DisplayAlerts = True
+    cmbBox.Clear
+    
+    'get each sheet name from workbook and place into combo box
+    For Each indSheet In wbAllRep.Sheets
+        cmbBox.AddItem indSheet.Name
+    Next indSheet
+    
+    wbAllRep.Close savechanges:=False
+    
+Else
+    MsgBox "No file selected. Please re-run the macro and try again."
+    End
+End If
+
+Application.ScreenUpdating = False
+
+End Sub
