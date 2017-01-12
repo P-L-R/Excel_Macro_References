@@ -1,4 +1,4 @@
-Public Function DeleteSheets(Optional iShCnt As Integer = 1)
+Public Sub DeleteSheets(Optional iShCnt As Integer = 1)
 
 'this function clears all of the sheets after the variable amount
 
@@ -10,4 +10,4 @@ If Sheets.Count > iShCnt Then
     Next i
 End If
 
-End Function
+End Sub
