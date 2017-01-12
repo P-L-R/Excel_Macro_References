@@ -1,4 +1,4 @@
-Public Function deleteXSheets(ByVal sShName As String, Optional bApprox As Boolean)
+Public Sub deleteNSheets(ByVal sShName As String, Optional bApprox As Boolean)
 
 'deletes sheets based on sheet name
 'allows option for exact name or approximate,
@@ -32,4 +32,4 @@ Else
     End
 End If
 
-End Function
+End Sub
