@@ -1,4 +1,5 @@
 Public Sub CloseWorkbookLoop(ByVal sTargWBName As String)
+
 'this sub loops through all of the open workbooks in Excel, looks for and closes the workbook specified in sTargWBName
 Dim openWBs As Workbook
 
