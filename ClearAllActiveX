@@ -1,6 +1,6 @@
-Public Function clearAll()
+Public Sub clearAll()
 
-'this function clears all of the ActiveX objects present on the sheet
+'this Sub clears all of the ActiveX objects present on the sheet
 
 For i = 1 To 8
     ThisWorkbook.Sheets("Macro").OLEObjects("TextBox" & i).Object.Value = ""
@@ -9,4 +9,4 @@ For i = 1 To 8
     End If
 Next i
 
-End Function
+End Sub
