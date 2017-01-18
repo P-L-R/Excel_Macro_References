@@ -44,12 +44,6 @@ If Not wbTarg Is Nothing Then
     Application.DisplayAlerts = False
     Range("A1").PasteSpecial xlPasteAllUsingSourceTheme
     
-    'special exception for SI sheet, pastespecial values again
-    'If shLanding = "SI" Then
-    '    Cells.Copy
-    '    Range("A1").PasteSpecial xlPasteValues
-    'End If
-    
     Application.CutCopyMode = False
     Application.DisplayAlerts = True
     
