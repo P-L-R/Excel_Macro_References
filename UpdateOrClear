@@ -7,6 +7,8 @@ Public Sub UpdateOrClear(ByVal shLanding As String, Optional ByRef wbTarg As Wor
 'bCloseResetWB variable triggers Workbook Close Savechanges=false for wbTarg. Default = False
 'bOnlyClear variable triggers storing of shLanding value for error message when False. Default = False
 
+Dim sUnavailSh As String
+
 ThisWorkbook.Sheets(shLanding).Activate
 
 'disable autofilter if available
